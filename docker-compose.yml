@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    container_name: system-info-demo
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - demo-network
+    labels:
+      - "coolify.name=system-info-demo"
+      - "coolify.managed=true"
+
+networks:
+  demo-network:
+    driver: bridge

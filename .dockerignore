@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Development
+.vscode
+.idea
+*.log
+*.tmp
+node_modules
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

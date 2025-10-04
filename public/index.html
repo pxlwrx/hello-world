@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>System Information Demo</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        <i class="fas fa-desktop"></i>
+                        System Information Demo
+                    </h1>
+                    <p class="subtitle">Coolify Deployment Test</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <!-- Browser Information -->
+                    <div class="column is-half">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    <i class="fas fa-globe mr-2"></i>
+                                    Browser Information
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>User Agent:</strong>
+                                        <span id="userAgent"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Platform:</strong>
+                                        <span id="platform"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Language:</strong>
+                                        <span id="language"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Cookies Enabled:</strong>
+                                        <span id="cookiesEnabled"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Online Status:</strong>
+                                        <span id="onlineStatus"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Information -->
+                    <div class="column is-half">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    Location Information
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>Hostname:</strong>
+                                        <span id="hostname"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Protocol:</strong>
+                                        <span id="protocol"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Port:</strong>
+                                        <span id="port"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Pathname:</strong>
+                                        <span id="pathname"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Origin:</strong>
+                                        <span id="origin"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Full URL:</strong>
+                                        <span id="fullUrl"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Screen Information -->
+                    <div class="column is-half">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    <i class="fas fa-tv mr-2"></i>
+                                    Screen Information
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>Screen Resolution:</strong>
+                                        <span id="screenResolution"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Available Size:</strong>
+                                        <span id="availableSize"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Color Depth:</strong>
+                                        <span id="colorDepth"></span> bits
+                                    </p>
+                                    <p>
+                                        <strong>Pixel Ratio:</strong>
+                                        <span id="pixelRatio"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Viewport Size:</strong>
+                                        <span id="viewportSize"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date & Time Information -->
+                    <div class="column is-half">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    <i class="fas fa-clock mr-2"></i>
+                                    Date & Time Information
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>Current Time:</strong>
+                                        <span id="currentTime"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Timezone:</strong>
+                                        <span id="timezone"></span>
+                                    </p>
+                                    <p>
+                                        <strong>UTC Offset:</strong>
+                                        <span id="utcOffset"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Locale:</strong>
+                                        <span id="locale"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Information -->
+                    <div class="column is-half">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    <i class="fas fa-tachometer-alt mr-2"></i>
+                                    Performance Information
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>Memory Usage:</strong>
+                                        <span id="memoryUsage"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Connection Type:</strong>
+                                        <span id="connectionType"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Hardware Concurrency:</strong>
+                                        <span id="hardwareConcurrency"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Max Touch Points:</strong>
+                                        <span id="maxTouchPoints"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Storage Information -->
+                    <div class="column is-full">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    <i class="fas fa-hdd mr-2"></i>
+                                    Storage Information
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="columns">
+                                        <div class="column">
+                                            <p>
+                                                <strong>Local Storage:</strong>
+                                                <span id="localStorage"></span>
+                                            </p>
+                                            <p>
+                                                <strong
+                                                    >Session Storage:</strong
+                                                >
+                                                <span
+                                                    id="sessionStorage"
+                                                ></span>
+                                            </p>
+                                        </div>
+                                        <div class="column">
+                                            <p>
+                                                <strong>IndexedDB:</strong>
+                                                <span id="indexedDB"></span>
+                                            </p>
+                                            <p>
+                                                <strong>WebSQL:</strong>
+                                                <span id="webSQL"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Refresh Button -->
+                <div class="has-text-centered mt-5">
+                    <button
+                        class="button is-primary is-large"
+                        onclick="refreshData()"
+                    >
+                        <i class="fas fa-sync-alt mr-2"></i>
+                        Refresh Data
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>System Information Demo</strong> for Coolify
+                    deployment testing.
+                    <br />
+                    Last updated: <span id="lastUpdated"></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="js/system-info.js"></script>
+    </body>
+</html>
