@@ -3,13 +3,7 @@ services:
     build: .
     container_name: system-info-demo
     restart: unless-stopped
-    networks:
-      - demo-network
     labels:
       - "coolify.name=system-info-demo"
       - "coolify.managed=true"
       - traefik.enable=true
-
-networks:
-  demo-network:
-    driver: bridge
