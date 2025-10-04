@@ -10,6 +10,7 @@ services:
     labels:
       - "coolify.name=system-info-demo"
       - "coolify.managed=true"
+      - traefik.enable=true
 
 networks:
   demo-network:
