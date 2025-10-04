@@ -2,8 +2,6 @@ services:
   web:
     build: .
     container_name: system-info-demo
-    ports:
-      - "8888:80"
     restart: unless-stopped
     networks:
       - demo-network
